@@ -3,7 +3,7 @@ name: Run Calendar Check Script
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'  # Run daily at 01:00 UTC
+    - cron: '30 1 * * *'  # Run daily at 01:30 UTC (08:30 AM Vietnam time)
 
 jobs:
   run-script:
@@ -26,4 +26,4 @@ jobs:
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
           TENANT_ID: ${{ secrets.TENANT_ID }}
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
-        run: python scripts/check_calendar.py
+        run: python check_calendar.py

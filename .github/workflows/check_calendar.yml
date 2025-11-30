@@ -27,3 +27,4 @@ jobs:
           TENANT_ID: ${{ secrets.TENANT_ID }}
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
         run: python check_calendar.py
+
